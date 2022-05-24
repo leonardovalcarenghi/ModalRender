@@ -1,0 +1,68 @@
+<div class="modal" id="Modal01">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal01</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Usuário:</label>
+                    <input class="form-control" type="text" placeholder="Digite seu nome ..." name="UserNameInput" />
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" name="SaveButton">Salvar</button>
+                <button type="button" class="btn btn-secondary" name="CancelButton">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="">
+
+</style>
+
+
+<script type="text/javascript">
+
+    // FUNCTIONS //
+    // OpenModal = Método responsável por abrir visualmente a modal;
+    // CloseModal = Método responsável por fechar visualmente a modal;
+
+    // CALLBACKS //
+    // OK = Callback de sucesso da modal (o callback fecha a modal);
+    // Cancel = Callback de cancelamento da modal (o callback fecha a modal);
+
+    // VARIAVEIS //
+    // This = HTMLElement da Modal no HTML;
+    // "ElementName" = Elemento no HTML da modal que contenha o atributo 'name';
+
+    // OBSERVAÇÕES //
+    // Essas variaveis e funções só funcionam dentro desse escopo ( <script> ).
+
+    // This.querySelector('[name="SaveButton"]').addEventListener('click', function () {
+
+    // })
+
+
+    SaveButton.addEventListener('click', (e) => {
+
+    })
+
+
+
+
+    OnOpen = function (parm1, parm2, parm3) {
+        console.log('Modal Abrindo:', parm1, parm2, parm3);
+    }
+
+    OnClose = function () {
+        console.log('Modal Fechando');
+    }
+
+    return { OnOpen, OnClose }
+
+
+</script>

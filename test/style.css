@@ -1,0 +1,12 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    flex: 1 1 500px;
+    margin: 5px;
+
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}

@@ -1,0 +1,76 @@
+<div class="modal fade" id="LoginModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    name="CloseButton"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input class="form-control" type="text" placeholder="" name="EmailInput" />
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input class="form-control" type="password" placeholder="" name="PasswordInput" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" name="LoginButton">Entrar</button>
+                <button type="button" class="btn btn-secondary" name="CancelButton">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="">
+
+</style>
+
+<script type="text/javascript">
+
+    // FUNCTIONS //
+    // OpenModal --------> Método responsável por abrir visualmente a modal;
+    // CloseModal -------> Método responsável por fechar visualmente a modal;
+
+    // CALLBACKS //
+    // OK ---------------> Callback de sucesso da modal (o callback fecha a modal);
+    // Cancel -----------> Callback de cancelamento da modal (o callback fecha a modal);
+
+    // VARIAVEIS //
+    // This -------------> HTMLElement da Modal no DOM;
+    // Element ----------> Objeto com todos os elementos que contenham o atributo 'name' no HTML da modal;
+    // Button -----------> Objeto com todos os botões que contenham o atributo 'name' no HTML da modal;
+    // Input ------------> Objeto com todos os inputs (incluindo select) que contenham o atributo 'name' no HTML da modal;
+    // "ElementName" ----> Elemento no HTML da modal que contenha o atributo 'name';
+
+    // OBSERVAÇÕES //
+    // Essas variaveis e funções só funcionam dentro desse escopo ( <script> ).
+
+    LoginButton.addEventListener('click', (e) => {
+
+        const email = EmailInput.value;
+        const password = PasswordInput.value;
+
+        if (!email) { alert('Digite seu e-mail.'); return; }
+        if (!password) { alert('Digite sua senha.'); return }
+
+        OK({ email, password });
+
+    });
+
+    return {
+
+        OnOpen: (data) => {
+
+        },
+
+        OnClose: () => {
+
+        }
+
+    }
+
+
+</script>
